@@ -1,17 +1,18 @@
 import m from 'mithril'
+import Auth from 'models/auth'
 
-let count = 0
-const increment = () => count++
-const decrement = () => count--
+const login = () => {
+  Auth.actions
+    .login()
+    .then(() => {
+      m.route.set('/about')
+    })
+}
 
 const IndexPage = {
   view: () => {
     return m('.box', [
-      m('.count', count),
-      m('button', { onclick: increment }, '+'),
-      m('button', { onclick: () => decrement() }, '-'),
-      m('br'),
-      m(m.route.Link, { href: '/about' }, 'About Page')
+      m('button', { onclick: login }, 'Login')
     ])
   }
 }
