@@ -7,7 +7,7 @@ module.exports = {
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
-  entry: './src/main.js',
+  entry: './src/app.js',
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
@@ -78,7 +78,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'bundle.css'
+      filename: 'stylesheet.css'
     }),
     new HtmlWebpackPLugin({
       title: 'Mithril Starter',

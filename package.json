@@ -5,7 +5,7 @@
     "name": "Brama Udi",
     "email": "bramaudi.al@gmail.com"
   },
-  "main": "src/main.js",
+  "main": "src/app.js",
   "license": "MIT",
   "scripts": {
     "watch": "webpack --watch --config webpack.config.js",
