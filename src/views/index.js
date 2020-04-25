@@ -5,7 +5,7 @@ const login = () => {
   Auth.actions
     .login()
     .then(() => {
-      m.route.set('/about')
+      m.route.set('/admin')
     })
 }
 
