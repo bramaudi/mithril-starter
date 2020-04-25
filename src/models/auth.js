@@ -1,16 +1,16 @@
 const Auth = {
 
   state: {
-    isLoggedin: false
+    isLogged: false
   },
 
   actions: {
     login: () => new Promise((resolve) => {
-      Auth.state.isLoggedin = true
+      Auth.state.isLogged = true
       resolve()
     }),
 
-    logout: () => { Auth.state.isLoggedin = false }
+    logout: () => { Auth.state.isLogged = false }
   }
 
 }
