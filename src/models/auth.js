@@ -1,16 +1,28 @@
 const Auth = {
 
   state: {
-    isLogged: false
+    isLogged: !!localStorage.getItem('token')
   },
 
   actions: {
-    login: () => new Promise((resolve) => {
-      Auth.state.isLogged = true
-      resolve()
+    login: (payload) => new Promise((resolve) => {
+      const { username, password } = payload
+      let response
+      if (username === 'admin' && password === 'admin123') {
+        localStorage.setItem('token', 'its just example')
+        response = true
+      } else {
+        response = false
+      }
+      resolve(response)
     }),
 
-    logout: () => { Auth.state.isLogged = false }
+    logout: () => {
+      return new Promise((resolve) => {
+        localStorage.removeItem('token')
+        resolve()
+      })
+    }
   }
 
 }

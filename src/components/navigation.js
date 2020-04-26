@@ -1,9 +1,9 @@
 import m from 'mithril'
 
 const navLinks = [
+  { to: '/', text: 'Index' },
   { to: '/login', text: 'Login' },
-  { to: '/admin', text: 'Admin' },
-  { to: '/', text: 'Index' }
+  { to: '/admin', text: 'Admin' }
 ]
 
 const Navigation = {
