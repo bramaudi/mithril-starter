@@ -12,30 +12,31 @@ const model = (field, value) => {
   state[field] = value
 }
 
-const Component = {
+const handleSubmit = (e) => {
+  e.preventDefault()
+  const { username, password } = state
+  Auth.actions
+    .login({ username, password })
+    .then((res) => {
+      if (res) {
+        window.location.href = '/admin'
+      } else {
+        model('failed', {
+          status: true,
+          message: 'Login failed, invalid credential.'
+        })
+      }
+    })
+}
 
-  handleSubmit: (e) => {
-    e.preventDefault()
-    const { username, password } = state
-    Auth.actions
-      .login({ username, password })
-      .then((res) => {
-        if (res) {
-          window.location.href = '/admin'
-        } else {
-          model('failed', {
-            status: true,
-            message: 'Login failed, invalid credential.'
-          })
-        }
-      })
-  },
+const Component = {
 
   view: () => {
     return m('.d-center.d-maximize', [
       m('.card', [
         m('h3', 'Login'),
-        m('form', { onsubmit: Component.handleSubmit }, [
+        m('p', 'Demo account:', m('br'), 'admin@admin123'),
+        m('form', { onsubmit: handleSubmit }, [
           m(Input, {
             id: 'inp-user',
             label: 'Username',
