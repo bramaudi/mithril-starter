@@ -1,21 +1,19 @@
 .layout
   padding: 0
-  margin: 0
-  
+  margin: 0 
+
   .sidebar
-    width: 20%
-    height: 100%
-    position: fixed
-    top: 0
-    background: #fff
+    display: none
+    border-right: 1px solid #ddd
 
     .nav-header
       height: 2.5rem
       display: flex
       justify-content: center
       align-items: center
-      background: #9f9f9f
-      color: #fff
+      background: #fff
+      color: #555
+      border-bottom: 1px solid #ddd
 
     .nav-links
       padding: 10px
@@ -33,9 +31,7 @@
           background: #eee
 
   .mainbar
-    width: 80%
-    margin-left: 20%
-
+    
     .header
       position: fixed
       top: 0
@@ -44,11 +40,28 @@
       display: flex
       align-items: center
       padding-left: 1rem
-      background: #aaa
-      color: #fff
+      background: #fff
+      color: #555
+      border-bottom: 1px solid #ddd
 
     .main-content
       margin-top: 2.5rem
       padding: 10px
-      
-      
+
+
+@media only screen and ( min-width: 780px )
+  
+  .layout
+
+    .sidebar
+      display: block
+      width: 20%
+      height: 100%
+      position: fixed
+      top: 0
+      background: #fff
+
+    .mainbar
+      width: 80%
+      margin-left: 20%
+    
