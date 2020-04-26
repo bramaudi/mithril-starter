@@ -1,58 +1,63 @@
 .layout
   padding: 0
-  margin: 0 
-
+  margin: 0
   .sidebar
     display: none
-    border-right: 1px solid #ddd
-
+    &.active
+      display: block
+      width: 100%
+      position: fixed
     .nav-header
       height: 2.5rem
       display: flex
       justify-content: center
       align-items: center
-      background: #fff
+      background: #f1f1f1
       color: #555
       border-bottom: 1px solid #ddd
-
     .nav-links
       padding: 10px
       margin: 0
       list-style: none
-
       li a
         text-decoration: none
         display: block
         padding: 5px
         border-bottom: 1px solid #eee
         color: black
-
         &:hover
           background: #eee
 
   .mainbar
-    
     .header
       position: fixed
       top: 0
       width: 100%
-      height: 2.5rem
       display: flex
       align-items: center
-      padding-left: 1rem
       background: #fff
       color: #555
       border-bottom: 1px solid #ddd
-
+      .expand-btn
+        cursor: pointer
+        height: 2.5rem
+        padding: 0 10px
+        margin: 0
+        margin-right: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #f1f1f1
+        img
+          width: 1.5rem
+          height: 1.5rem
     .main-content
       margin-top: 2.5rem
       padding: 10px
 
 
 @media only screen and ( min-width: 780px )
-  
   .layout
-
     .sidebar
       display: block
       width: 20%
@@ -60,8 +65,11 @@
       position: fixed
       top: 0
       background: #fff
-
+      border-right: 1px solid #ddd
     .mainbar
       width: 80%
       margin-left: 20%
-    
+      .header
+        padding: .65rem
+        .expand-btn
+          display: none
