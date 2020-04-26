@@ -1,0 +1,5 @@
+{
+  "name": "mithril-starter",
+  "version": 2,
+  "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
+}
