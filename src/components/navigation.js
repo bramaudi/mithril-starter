@@ -6,12 +6,18 @@ const navLinks = [
   { to: '/admin', text: 'Admin' }
 ]
 
+const hideSidebar = () => {
+  document.getElementById('js-sidebar').classList.toggle('active')
+}
+
 const Navigation = {
   view: () => (
     m('ul.nav-links', [
 
       navLinks.map((nav, key) => (
-        m('li', m(m.route.Link, { href: nav.to }, nav.text))
+        m('li', {
+          onclick: hideSidebar
+        }, m(m.route.Link, { href: nav.to }, nav.text))
       ))
 
     ])
