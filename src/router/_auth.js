@@ -1,5 +1,5 @@
 import m from 'mithril'
-import { Layout } from './_views'
+import Layout from 'components/layout'
 import Auth from 'models/auth'
 
 // If not meet the requirement then redirect to this
