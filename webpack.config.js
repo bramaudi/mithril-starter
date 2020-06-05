@@ -11,7 +11,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
-    publicPath: '',
+    publicPath: '/mithril-starter/', // Opt for demo purpose, edit or disable
     path: path.resolve(__dirname, './dist')
   },
   mode: 'development',
