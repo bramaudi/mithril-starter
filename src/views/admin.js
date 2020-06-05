@@ -1,11 +1,12 @@
 import m from 'mithril'
 import Auth from 'models/auth'
+import { prefix as routerPrefix } from '../router/index'
 
 const handleLogout = () => {
   Auth.actions
     .logout()
     .then(() => {
-      window.location.href = '/login'
+      window.location.href = `${routerPrefix}/login`
     })
 }
 

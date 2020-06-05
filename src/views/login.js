@@ -1,6 +1,7 @@
 import m from 'mithril'
 import Auth from 'models/auth'
 import Input from 'components/form/input'
+import { prefix as routerPrefix } from '../router/index'
 
 const state = {
   username: '',
@@ -19,7 +20,7 @@ const handleSubmit = (e) => {
     .login({ username, password })
     .then((res) => {
       if (res) {
-        window.location.href = '/admin'
+        window.location.href = `${routerPrefix}/admin`
       } else {
         model('failed', {
           status: true,
