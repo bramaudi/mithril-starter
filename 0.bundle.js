@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{8:function(n,t,e){"use strict";e.r(t);var r=e(0),i=e.n(r),o={view:function(){return i()(".card","Welcome to Mithril JS Starter")}};t.default=o}}]);
