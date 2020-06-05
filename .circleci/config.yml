@@ -28,7 +28,12 @@ jobs:
       - run:
           name: Deploy dist to gh-pages branch
           command: gh-pages --dist dist
+
+
 workflows:
     build:
       jobs:
         - deploy
+          filters:
+            branches:
+              only: master
