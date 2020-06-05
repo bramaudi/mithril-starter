@@ -1,17 +1,26 @@
 version: 2.1
-orbs:
-  node: circleci/node@1.1.6
 jobs:
-  build:
-    executor:
-      name: node/default
+  deploy:
+    docker:
+      image: node:12.18.0
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: npm run build
+      - run:
+          name: Install and build
+          command: yarn && yarn build
+        
+      - run: Add gh-pages cli
+          name: |
+            yarn global add gh-pages
+            git config user.email "bramaudi.al@gmail.com"
+            git config user.name "bramaudi"
+      - run:
+          name: Deploy dist to gh-pages branch
+          command: gh-pages --dist dist
 workflows:
     build:
       jobs:
-        - build
+        - deploy
+          filters:
+            branches:
+              only: master
