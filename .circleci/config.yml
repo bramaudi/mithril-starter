@@ -17,7 +17,7 @@ jobs:
             git config user.name "bramaudi"
 
       - add_ssh_keys:
-          - fingerprints:
+          fingerprints:
             - "cd:cf:0d:02:7c:d5:74:09:79:f5:36:a4:6b:2b:80:a5"
             
       - run:
