@@ -27,7 +27,7 @@ jobs:
             
       - run:
           name: Deploy dist to gh-pages branch
-          command: gh-pages  -m ‘auto commit [ci skip]’ --dist dist
+          command: gh-pages  -m 'auto commit [ci skip]' --dist dist
 
 
 workflows:
