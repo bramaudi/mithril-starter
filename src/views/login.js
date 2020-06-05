@@ -20,7 +20,7 @@ const handleSubmit = (e) => {
     .login({ username, password })
     .then((res) => {
       if (res) {
-        window.location.href = `${routerPrefix}/admin`
+        window.location.reload()
       } else {
         model('failed', {
           status: true,

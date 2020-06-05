@@ -6,7 +6,7 @@ const handleLogout = () => {
   Auth.actions
     .logout()
     .then(() => {
-      window.location.href = `${routerPrefix}/login`
+      window.location.reload()
     })
 }
 
