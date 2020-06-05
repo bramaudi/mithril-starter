@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   deploy:
     docker:
-      image: node:12.18.0
+      - image: node:12.18.0
     steps:
       - checkout
       - run:
@@ -15,6 +15,7 @@ jobs:
             yarn global add gh-pages
             git config user.email "bramaudi.al@gmail.com"
             git config user.name "bramaudi"
+            
       - run:
           name: Deploy dist to gh-pages branch
           command: gh-pages --dist dist
