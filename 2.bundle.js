@@ -1,1 +1,1 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{19:function(n,o,t){"use strict";t.r(o);var u=t(0),w=t.n(u),e={view:function(){return w()("h1","Not found")}};o.default=e}}]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{20:function(n,o,t){"use strict";t.r(o);var u=t(0),w=t.n(u),e={view:function(){return w()("h1","Not found")}};o.default=e}}]);
