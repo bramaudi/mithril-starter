@@ -36,4 +36,5 @@ workflows:
         - deploy:
             filters:
               branches:
+                only: master
                 ignore: gh-pages
