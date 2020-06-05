@@ -9,8 +9,9 @@ jobs:
           name: Install and build
           command: yarn && yarn build
         
-      - run: Add gh-pages cli
-          name: |
+      - run:
+          name: Add gh-pages cli
+          command: |
             yarn global add gh-pages
             git config user.email "bramaudi.al@gmail.com"
             git config user.name "bramaudi"
