@@ -18,7 +18,7 @@ jobs:
 
       - add_ssh_keys:
           - fingerprints:
-            - "cd:cf:0d:02:7c:d5:74:09:79:f5:36:a4:6b:2b:80:a5"
+            - "82:bd:61:dd:9d:59:64:50:35:d5:9c:64:8f:1a:4a:1a"
             
       - run:
           name: Deploy dist to gh-pages branch
